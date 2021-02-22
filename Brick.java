@@ -1,10 +1,14 @@
 package brick;
 
-import javax.swing.JPanel;
+import java.io.Serializable;
 
-public class Brick extends JPanel{
+public class Brick implements Serializable {
+
 	private int brickXCoor;
 	private int brickYCoor;
+	private static final int length = 70;
+	private static final int width = 30;
+	
 	public int getBrickXCoor() {
 		return brickXCoor;
 	}
@@ -21,6 +25,13 @@ public class Brick extends JPanel{
 		this.brickXCoor = brickXCoor;
 		this.brickYCoor = brickYCoor;
 	}
+	public static int getLength() {
+		return length;
+	}
+	public static int getWidthBrick() {
+		return width;
+	}
+
 	
 	
 }

@@ -1,6 +1,6 @@
 package alien;
 
-import java.awt.Graphics;
+import javax.swing.ImageIcon;
 
 public class CooperativeAlien extends Alien{
 
@@ -8,9 +8,21 @@ public class CooperativeAlien extends Alien{
 		super(alienXCoor, alienYCoor);
 		// TODO Auto-generated constructor stub
 	}
-	public void draw(Graphics g) {
 
+	@Override
+	public void doAction() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	private ImageIcon i = new ImageIcon("src/images/cooperativeAlien.jpg");
+
+	public ImageIcon getI() {
+		return i;
 	}
 
+	public void setI(ImageIcon i) {
+		this.i = i;
+	}
 
 }

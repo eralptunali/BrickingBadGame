@@ -1,10 +1,28 @@
 package brick;
-import java.awt.Color;
-import java.awt.Graphics;
-import interfaces.*;
 
-public class SimpleBrick extends Brick implements Drawable {
 
+import javax.swing.ImageIcon;
+
+public class SimpleBrick extends Brick {
+	private String type = "SimpleBrick";
+	
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	private ImageIcon i = new ImageIcon("src/images/simpleBrick.jpg");
+	
+	public ImageIcon getI() {
+		return i;
+	}
+
+	public void setI(ImageIcon i) {
+		this.i = i;
+	}
 
 	public int getsBrickX() {
 		return super.getBrickXCoor();
@@ -22,18 +40,12 @@ public class SimpleBrick extends Brick implements Drawable {
 		super.setBrickYCoor(sBrickY);
 	}
 
-
-
-
 	public SimpleBrick(int brickXCoor, int brickYCoor) {
 		super(brickXCoor, brickYCoor);
 	}
 
-	public void draw(Graphics g) {
-		// TODO Auto-generated method stub
-		g.setColor(Color.ORANGE);
-		g.fillRect(this.getsBrickX(), this.getsBrickY(), 100, 50);
-	}
+
+
 
 
 
